@@ -1,10 +1,10 @@
-import { Icon, RawData } from '../types';
+import { Icon, RawData } from "../types";
 
-export const ContentTransducer = (RawContent: RawData[]): Icon[] => {
+export const ContentTransducer = (RawContent: any[]): Icon[] => {
   return RawContent.map((item) => {
     return {
       id: item?.id.toString(),
-      url: item?.images.png[128],
+      url: item?.images["128"],
       description: item?.description,
     };
   });
